@@ -24,6 +24,9 @@ class RedirectIfAuthenticated
                 return redirect(RouteServiceProvider::HOME);
             }
         }
+        if (Auth::check()) {
+            return redirect('/'); // Przekierowanie użytkownika, jeśli już jest zalogowany
+        }
 
         return $next($request);
     }
