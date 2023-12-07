@@ -21,7 +21,7 @@ class UsersTableSeeder extends Seeder
 //      Dodanie komentarzy do istniejących użytkowników
             $users = User::all();
             $users->each(function ($user) {
-                $commentsCount = rand(2, 4);
+                $commentsCount = rand(2, 5);
 
                 Comments::factory()->count($commentsCount)->create([
                     'user_id' => $user->id,

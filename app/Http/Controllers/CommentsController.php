@@ -64,7 +64,7 @@ class CommentsController extends Controller
         // Pobranie komentarzy z bazy danych dla danej daty
         $comments = $user->comments()
             ->whereDate('created_at', $currentDate)
-            ->paginate(10);
+            ->paginate(5);
 
         return view('register_employee.comments.my-comments', [
             'comments'=>$comments,

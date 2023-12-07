@@ -50,7 +50,7 @@
         <hr />
     @endforeach
     <br>
-    {{$comments->appends(['date' => $currentDate])->onEachSide(1)->links()}}
+    {{$comments->appends(['date' => $currentDate])->onEachSide(3)->links('pagination.custom')}}
 
 </x-register_employee.layout>
 
