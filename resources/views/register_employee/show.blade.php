@@ -47,7 +47,12 @@
                         </dd>
                     </div>
                 </dl>
+
             </div>
+
+        </div>
+        <div class="flex justify-center mt-5">
+            <button class="cursor-pointer bg-green-700 w-1/3 items-center hover:bg-green-900 text-white font-bold py-2 px-4 rounded">  <a href="{{ route('workedhours.create', $employee->id) }}"> Add hours</a></button>
         </div>
 
     </div>

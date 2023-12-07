@@ -10,7 +10,6 @@
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
-{{--    @livewireStyles--}}
 </head>
 
 <body class="font-sans antialiased">
@@ -20,15 +19,20 @@
     {{-- header --}}
     <header class="flex justify-between items-center">
         {{-- logo, search --}}
-        <div class="flex items-center">
+        <div class="flex items-center ">
             <a href="{{url('/')}}"></a>
 
-            <div class="text-2xl block sm:text-3xl text-gray-600 font-medium ml-2 tracking-tight">
-                <a href="{{url('/')}}">Employee Register</a>
-            </div>
+                <div class="text-2xl block sm:text-3xl text-gray-600 font-medium ml-2 tracking-tight ">
+                    <a href="{{url('/')}}">Employee Register</a>
+                </div>
+            @if(Auth::user()->role==='moderator' || Auth::user()->role==='admin')
+                <div class="hidden lg:flex mr-3">
+                    <livewire:search />
+                </div>
+            @endif
         </div>
         {{-- links --}}
-        <div class="text-lg hidden lg:flex space-x-6">
+        <div class=" hidden lg:flex space-x-6 items-center">
             @if (Auth::check())
                 <p>Logged as: <a class="hover:text-stone-500" href="{{route('profile.edit')}}">{{Auth::user()->first_name}}</a></p>
                 <x-register_employee.logout_form />
@@ -46,8 +50,7 @@
                    class=" hover:text-stone-500">Add Comment</a>
                 <a href="{{route('comments.my_comments')}}"
                    class=" hover:text-stone-500">My Comments</a>
-                <a href="{{route('home')}}"
-                   class="inline font-bold text-sm px-6 py-2 text-white rounded-full bg-red-500 hover:bg-red-600 ">Comments</a>
+                <button class=" inline font-bold text-sm px-6 py-2 text-white rounded-full bg-red-500 hover:bg-red-600 "><a href="{{route('home')}}">Comments</a></button>
             @else
                 <a class="tracking-widest hover:text-stone-500" href="{{ route('login') }}">Login</a>
                 <a class="tracking-widest hover:text-stone-500" href="{{ route('register') }}">Register</a>
@@ -84,6 +87,9 @@
                    class=" hover:text-stone-500">My Comments</a>
                 <a href="{{route('home')}}"
                    class="inline font-bold text-sm px-6 py-2 text-white rounded-full bg-red-500 hover:bg-red-600 ">Comments</a>
+                <div class="">
+                    <livewire:search />
+                </div>
             @else
                 <a class="tracking-widest hover:text-stone-500" href="{{ route('login') }}">Login</a>
                 <a class="tracking-widest hover:text-stone-500" href="{{ route('register') }}">Register</a>

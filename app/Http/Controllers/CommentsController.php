@@ -93,7 +93,7 @@ class CommentsController extends Controller
 
         $request->user()->comments()->create($validate);
 
-        return redirect(route('home'));
+        return redirect(route('comments.my_comments'));
     }
 
     /**

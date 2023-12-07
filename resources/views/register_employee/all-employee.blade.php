@@ -1,3 +1,4 @@
+
 <x-register_employee.layout>
 
     <x-slot:title>
@@ -94,6 +95,6 @@
 
     <br/>
 
-    {{$employees->links()}}
+    {{$employees->onEachSide(1)->links()}}
 
 </x-register_employee.layout>

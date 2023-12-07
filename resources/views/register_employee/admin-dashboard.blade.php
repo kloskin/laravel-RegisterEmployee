@@ -20,7 +20,7 @@
                         </div>
                         <div  x-show="tab === 1">
                             <x-register_employee.table-allusers :users="$users"/>
-                            {{ $users->links() }}
+                            {{ $users->onEachSide(1)->links() }}
                         </div>
                         <div x-show="tab === 2">
                             @include('register_employee.admin.add-form')
