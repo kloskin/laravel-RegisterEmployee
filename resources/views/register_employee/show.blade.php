@@ -52,7 +52,8 @@
 
         </div>
         <div class="flex justify-center mt-5">
-            <button class="cursor-pointer bg-green-700 w-1/3 items-center hover:bg-green-900 text-white font-bold py-2 px-4 rounded">  <a href="{{ route('workedhours.create', $employee->id) }}"> Add hours</a></button>
+
+            <a href="{{ route('workedhours.create', $employee->id) }}" class="text-center  font-semibold text-xs cursor-pointer bg-gray-800 w-1/3 items-center hover:bg-gray-700 text-white py-2 px-4 rounded"> ADD HOURS</a>
         </div>
 
     </div>

@@ -11,8 +11,6 @@ class Comments extends Model
 
     protected $fillable = [
         'content',
-        /*'created_at',
-        'updated_at'*/
     ];
 
     public function user()
