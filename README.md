@@ -1,6 +1,6 @@
 # laravel-RegisterEmployee - Employee Management Portal with Integrated Daily Commentary
 
-** Web application, empowered by Laravel and styled with Tailwind CSS, serves as an all-encompassing employee management system with a unique twist—daily commentary. Aimed at streamlining administrative tasks and enhancing communication, this portal is the go-to solution for organizations seeking efficiency and engagement.**
+**Web application, empowered by Laravel and styled with Tailwind CSS, serves as an all-encompassing employee management system with a unique twist—daily commentary. Aimed at streamlining administrative tasks and enhancing communication, this portal is the go-to solution for organizations seeking efficiency and engagement.**
 
 **Core Features:**
 
